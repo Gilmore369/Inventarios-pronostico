@@ -1,0 +1,224 @@
+{
+  "summary": {
+    "total_endpoint_tests": 9,
+    "successful_endpoint_tests": 9,
+    "success_rate": 100.0,
+    "within_time_threshold": 9,
+    "within_memory_threshold": 9,
+    "time_compliance_rate": 100.0,
+    "memory_compliance_rate": 100.0
+  },
+  "endpoint_statistics": {
+    "/api/upload": {
+      "total_tests": 4,
+      "successful_tests": 4,
+      "avg_response_time": 0.001,
+      "max_response_time": 0.005,
+      "avg_memory_usage": 0.07,
+      "max_memory_usage": 0.27
+    },
+    "/api/process": {
+      "total_tests": 1,
+      "successful_tests": 1,
+      "avg_response_time": 0.0,
+      "max_response_time": 0.0,
+      "avg_memory_usage": 0.0,
+      "max_memory_usage": 0.0
+    },
+    "/api/results": {
+      "total_tests": 1,
+      "successful_tests": 1,
+      "avg_response_time": 0.0,
+      "max_response_time": 0.0,
+      "avg_memory_usage": 0.0,
+      "max_memory_usage": 0.0
+    },
+    "/api/forecast": {
+      "total_tests": 3,
+      "successful_tests": 3,
+      "avg_response_time": 0.004,
+      "max_response_time": 0.011,
+      "avg_memory_usage": 0.0,
+      "max_memory_usage": 0.0
+    }
+  },
+  "model_processing_statistics": {
+    "total_tests": 4,
+    "successful_tests": 4,
+    "avg_processing_time": 0.585,
+    "max_processing_time": 0.645,
+    "avg_memory_usage": 1.48,
+    "max_memory_usage": 3.55
+  },
+  "detailed_results": [
+    {
+      "endpoint": "/api/upload",
+      "method": "POST",
+      "dataset_size": 12,
+      "response_time": 0.005,
+      "memory_used_mb": 0.27,
+      "status_code": 200,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:54:51.763095",
+      "session_id": "20250822_155451_762635"
+    },
+    {
+      "endpoint": "/api/upload",
+      "method": "POST",
+      "dataset_size": 24,
+      "response_time": 0.0,
+      "memory_used_mb": 0.01,
+      "status_code": 200,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:54:51.763095",
+      "session_id": "20250822_155451_763095"
+    },
+    {
+      "endpoint": "/api/upload",
+      "method": "POST",
+      "dataset_size": 60,
+      "response_time": 0.0,
+      "memory_used_mb": 0.0,
+      "status_code": 200,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:54:51.764097",
+      "session_id": "20250822_155451_764097"
+    },
+    {
+      "endpoint": "/api/upload",
+      "method": "POST",
+      "dataset_size": 120,
+      "response_time": 0.0,
+      "memory_used_mb": 0.0,
+      "status_code": 200,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:54:51.765101",
+      "session_id": "20250822_155451_764097"
+    },
+    {
+      "endpoint": "/api/process",
+      "method": "POST",
+      "session_id": "test_session_123",
+      "response_time": 0.0,
+      "memory_used_mb": 0.0,
+      "status_code": 200,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:54:51.765101"
+    },
+    {
+      "operation": "model_processing",
+      "dataset_size": 12,
+      "response_time": 0.537,
+      "memory_used_mb": 3.55,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:54:52.301813",
+      "models_completed": 5
+    },
+    {
+      "operation": "model_processing",
+      "dataset_size": 24,
+      "response_time": 0.566,
+      "memory_used_mb": 0.6,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:54:52.868075",
+      "models_completed": 6
+    },
+    {
+      "operation": "model_processing",
+      "dataset_size": 60,
+      "response_time": 0.592,
+      "memory_used_mb": 1.04,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:54:53.460074",
+      "models_completed": 6
+    },
+    {
+      "operation": "model_processing",
+      "dataset_size": 120,
+      "response_time": 0.645,
+      "memory_used_mb": 0.71,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:54:54.106436",
+      "models_completed": 6
+    },
+    {
+      "endpoint": "/api/results",
+      "method": "GET",
+      "session_id": "test_session_123",
+      "response_time": 0.0,
+      "memory_used_mb": 0.0,
+      "status_code": 200,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:54:54.634499",
+      "results_count": 6
+    },
+    {
+      "endpoint": "/api/forecast",
+      "method": "POST",
+      "session_id": "test_session_123",
+      "model_name": "Media Móvil Simple (SMA)",
+      "response_time": 0.001,
+      "memory_used_mb": 0.0,
+      "status_code": 200,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:54:54.635501",
+      "forecast_length": 12
+    },
+    {
+      "endpoint": "/api/forecast",
+      "method": "POST",
+      "session_id": "test_session_123",
+      "model_name": "Suavizado Exponencial Simple (SES)",
+      "response_time": 0.011,
+      "memory_used_mb": 0.0,
+      "status_code": 200,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:54:54.646449",
+      "forecast_length": 12
+    },
+    {
+      "endpoint": "/api/forecast",
+      "method": "POST",
+      "session_id": "test_session_123",
+      "model_name": "Regresión Lineal",
+      "response_time": 0.001,
+      "memory_used_mb": 0.0,
+      "status_code": 200,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:54:54.647455",
+      "forecast_length": 12
+    }
+  ],
+  "thresholds": {
+    "max_response_time_seconds": 5.0,
+    "max_memory_usage_mb": 200
+  },
+  "test_type": "simulated_api_performance",
+  "timestamp": "2025-08-22T15:54:54.648468"
+}

@@ -1,0 +1,2133 @@
+{
+  "summary": {
+    "total_tests": 96,
+    "successful_tests": 92,
+    "success_rate": 95.83,
+    "within_time_threshold": 96,
+    "within_memory_threshold": 96,
+    "time_compliance_rate": 100.0,
+    "memory_compliance_rate": 100.0
+  },
+  "model_statistics": {
+    "Media Móvil Simple (SMA)": {
+      "total_tests": 16,
+      "successful_tests": 16,
+      "avg_execution_time": 0.01,
+      "max_execution_time": 0.019,
+      "avg_memory_usage": 0.0,
+      "max_memory_usage": 0.05
+    },
+    "Suavizado Exponencial Simple (SES)": {
+      "total_tests": 16,
+      "successful_tests": 16,
+      "avg_execution_time": 0.014,
+      "max_execution_time": 0.028,
+      "avg_memory_usage": 0.03,
+      "max_memory_usage": 0.44
+    },
+    "Holt-Winters (Triple Exponencial)": {
+      "total_tests": 16,
+      "successful_tests": 12,
+      "avg_execution_time": 0.025,
+      "max_execution_time": 0.044,
+      "avg_memory_usage": 0.01,
+      "max_memory_usage": 0.22
+    },
+    "ARIMA (AutoRegressive Integrated Moving Average)": {
+      "total_tests": 16,
+      "successful_tests": 16,
+      "avg_execution_time": 0.243,
+      "max_execution_time": 0.388,
+      "avg_memory_usage": 0.19,
+      "max_memory_usage": 2.74
+    },
+    "Regresión Lineal": {
+      "total_tests": 16,
+      "successful_tests": 16,
+      "avg_execution_time": 0.002,
+      "max_execution_time": 0.005,
+      "avg_memory_usage": 0.01,
+      "max_memory_usage": 0.11
+    },
+    "Random Forest": {
+      "total_tests": 16,
+      "successful_tests": 16,
+      "avg_execution_time": 0.381,
+      "max_execution_time": 0.455,
+      "avg_memory_usage": 0.14,
+      "max_memory_usage": 0.61
+    }
+  },
+  "detailed_results": [
+    {
+      "model_name": "Media Móvil Simple (SMA)",
+      "dataset": "trend_12",
+      "dataset_size": 12,
+      "execution_time": 0.006,
+      "memory_used_mb": 0.05,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:46.881371",
+      "metrics": {
+        "mae": 5.62,
+        "mse": 33.65,
+        "rmse": 5.8,
+        "mape": 5.49
+      },
+      "parameters": {
+        "window": 9
+      }
+    },
+    {
+      "model_name": "Suavizado Exponencial Simple (SES)",
+      "dataset": "trend_12",
+      "dataset_size": 12,
+      "execution_time": 0.028,
+      "memory_used_mb": 0.44,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:46.909744",
+      "metrics": {
+        "mae": 6.31,
+        "mse": 53.28,
+        "rmse": 7.3,
+        "mape": 5.88
+      },
+      "parameters": {
+        "alpha": 0.1
+      }
+    },
+    {
+      "model_name": "Holt-Winters (Triple Exponencial)",
+      "dataset": "trend_12",
+      "dataset_size": 12,
+      "execution_time": 0.002,
+      "memory_used_mb": 0.01,
+      "success": false,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:46.911249",
+      "error": "Model returned None or invalid result"
+    },
+    {
+      "model_name": "ARIMA (AutoRegressive Integrated Moving Average)",
+      "dataset": "trend_12",
+      "dataset_size": 12,
+      "execution_time": 0.315,
+      "memory_used_mb": 2.74,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:47.226748",
+      "metrics": {
+        "mae": 5.39,
+        "mse": 41.33,
+        "rmse": 6.43,
+        "mape": 5.04
+      },
+      "parameters": {
+        "order": [
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "model_name": "Regresión Lineal",
+      "dataset": "trend_12",
+      "dataset_size": 12,
+      "execution_time": 0.005,
+      "memory_used_mb": 0.11,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:47.232867",
+      "metrics": {
+        "mae": 6.07,
+        "mse": 47.82,
+        "rmse": 6.92,
+        "mape": 5.66
+      },
+      "parameters": {
+        "intercept": 106.87,
+        "coefficient": -0.2
+      }
+    },
+    {
+      "model_name": "Random Forest",
+      "dataset": "trend_12",
+      "dataset_size": 12,
+      "execution_time": 0.392,
+      "memory_used_mb": 0.43,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:47.626072",
+      "metrics": {
+        "mae": 2.47,
+        "mse": 9.09,
+        "rmse": 3.02,
+        "mape": 2.32
+      },
+      "parameters": {
+        "n_estimators": 50,
+        "max_depth": null
+      }
+    },
+    {
+      "model_name": "Media Móvil Simple (SMA)",
+      "dataset": "seasonal_12",
+      "dataset_size": 12,
+      "execution_time": 0.005,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:47.631940",
+      "metrics": {
+        "mae": 18.17,
+        "mse": 519.88,
+        "rmse": 22.8,
+        "mape": 20.7
+      },
+      "parameters": {
+        "window": 4
+      }
+    },
+    {
+      "model_name": "Suavizado Exponencial Simple (SES)",
+      "dataset": "seasonal_12",
+      "dataset_size": 12,
+      "execution_time": 0.012,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:47.645035",
+      "metrics": {
+        "mae": 16.57,
+        "mse": 430.42,
+        "rmse": 20.75,
+        "mape": 19.53
+      },
+      "parameters": {
+        "alpha": 0.2
+      }
+    },
+    {
+      "model_name": "Holt-Winters (Triple Exponencial)",
+      "dataset": "seasonal_12",
+      "dataset_size": 12,
+      "execution_time": 0.0,
+      "memory_used_mb": 0.0,
+      "success": false,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:47.645035",
+      "error": "Model returned None or invalid result"
+    },
+    {
+      "model_name": "ARIMA (AutoRegressive Integrated Moving Average)",
+      "dataset": "seasonal_12",
+      "dataset_size": 12,
+      "execution_time": 0.24,
+      "memory_used_mb": 0.09,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:47.884965",
+      "metrics": {
+        "mae": 13.73,
+        "mse": 245.11,
+        "rmse": 15.66,
+        "mape": 15.82
+      },
+      "parameters": {
+        "order": [
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "model_name": "Regresión Lineal",
+      "dataset": "seasonal_12",
+      "dataset_size": 12,
+      "execution_time": 0.001,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:47.886990",
+      "metrics": {
+        "mae": 15.83,
+        "mse": 343.52,
+        "rmse": 18.53,
+        "mape": 18.06
+      },
+      "parameters": {
+        "intercept": 95.3,
+        "coefficient": -0.22
+      }
+    },
+    {
+      "model_name": "Random Forest",
+      "dataset": "seasonal_12",
+      "dataset_size": 12,
+      "execution_time": 0.38,
+      "memory_used_mb": 0.05,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:48.267578",
+      "metrics": {
+        "mae": 5.81,
+        "mse": 49.73,
+        "rmse": 7.05,
+        "mape": 6.56
+      },
+      "parameters": {
+        "n_estimators": 100,
+        "max_depth": null
+      }
+    },
+    {
+      "model_name": "Media Móvil Simple (SMA)",
+      "dataset": "stationary_12",
+      "dataset_size": 12,
+      "execution_time": 0.007,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:48.274481",
+      "metrics": {
+        "mae": 0.01,
+        "mse": 0.0,
+        "rmse": 0.01,
+        "mape": 5.75
+      },
+      "parameters": {
+        "window": 11
+      }
+    },
+    {
+      "model_name": "Suavizado Exponencial Simple (SES)",
+      "dataset": "stationary_12",
+      "dataset_size": 12,
+      "execution_time": 0.012,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:48.286588",
+      "metrics": {
+        "mae": 0.01,
+        "mse": 0.0,
+        "rmse": 0.01,
+        "mape": 5.2
+      },
+      "parameters": {
+        "alpha": 0.1
+      }
+    },
+    {
+      "model_name": "Holt-Winters (Triple Exponencial)",
+      "dataset": "stationary_12",
+      "dataset_size": 12,
+      "execution_time": 0.001,
+      "memory_used_mb": 0.0,
+      "success": false,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:48.287592",
+      "error": "Model returned None or invalid result"
+    },
+    {
+      "model_name": "ARIMA (AutoRegressive Integrated Moving Average)",
+      "dataset": "stationary_12",
+      "dataset_size": 12,
+      "execution_time": 0.388,
+      "memory_used_mb": 0.04,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:48.675284",
+      "metrics": {
+        "mae": 0.01,
+        "mse": 0.0,
+        "rmse": 0.01,
+        "mape": 6.8
+      },
+      "parameters": {
+        "order": [
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "model_name": "Regresión Lineal",
+      "dataset": "stationary_12",
+      "dataset_size": 12,
+      "execution_time": 0.001,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:48.676745",
+      "metrics": {
+        "mae": 0.01,
+        "mse": 0.0,
+        "rmse": 0.01,
+        "mape": 6.33
+      },
+      "parameters": {
+        "intercept": 0.1,
+        "coefficient": 0.0
+      }
+    },
+    {
+      "model_name": "Random Forest",
+      "dataset": "stationary_12",
+      "dataset_size": 12,
+      "execution_time": 0.365,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:49.043132",
+      "metrics": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "rmse": 0.01,
+        "mape": 3.19
+      },
+      "parameters": {
+        "n_estimators": 50,
+        "max_depth": null
+      }
+    },
+    {
+      "model_name": "Media Móvil Simple (SMA)",
+      "dataset": "complex_12",
+      "dataset_size": 12,
+      "execution_time": 0.006,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:49.048866",
+      "metrics": {
+        "mae": 12.6,
+        "mse": 318.24,
+        "rmse": 17.84,
+        "mape": 10.85
+      },
+      "parameters": {
+        "window": 9
+      }
+    },
+    {
+      "model_name": "Suavizado Exponencial Simple (SES)",
+      "dataset": "complex_12",
+      "dataset_size": 12,
+      "execution_time": 0.011,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:49.060982",
+      "metrics": {
+        "mae": 14.8,
+        "mse": 409.12,
+        "rmse": 20.23,
+        "mape": 17.9
+      },
+      "parameters": {
+        "alpha": 0.2
+      }
+    },
+    {
+      "model_name": "Holt-Winters (Triple Exponencial)",
+      "dataset": "complex_12",
+      "dataset_size": 12,
+      "execution_time": 0.001,
+      "memory_used_mb": 0.0,
+      "success": false,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:49.061984",
+      "error": "Model returned None or invalid result"
+    },
+    {
+      "model_name": "ARIMA (AutoRegressive Integrated Moving Average)",
+      "dataset": "complex_12",
+      "dataset_size": 12,
+      "execution_time": 0.181,
+      "memory_used_mb": 0.02,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:49.242540",
+      "metrics": {
+        "mae": 11.97,
+        "mse": 286.45,
+        "rmse": 16.92,
+        "mape": 14.34
+      },
+      "parameters": {
+        "order": [
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "model_name": "Regresión Lineal",
+      "dataset": "complex_12",
+      "dataset_size": 12,
+      "execution_time": 0.001,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:49.243764",
+      "metrics": {
+        "mae": 15.13,
+        "mse": 298.37,
+        "rmse": 17.27,
+        "mape": 17.38
+      },
+      "parameters": {
+        "intercept": 87.26,
+        "coefficient": 1.39
+      }
+    },
+    {
+      "model_name": "Random Forest",
+      "dataset": "complex_12",
+      "dataset_size": 12,
+      "execution_time": 0.365,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:49.610214",
+      "metrics": {
+        "mae": 5.03,
+        "mse": 54.01,
+        "rmse": 7.35,
+        "mape": 5.71
+      },
+      "parameters": {
+        "n_estimators": 100,
+        "max_depth": null
+      }
+    },
+    {
+      "model_name": "Media Móvil Simple (SMA)",
+      "dataset": "trend_24",
+      "dataset_size": 24,
+      "execution_time": 0.007,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:49.617748",
+      "metrics": {
+        "mae": 8.25,
+        "mse": 95.11,
+        "rmse": 9.75,
+        "mape": 7.41
+      },
+      "parameters": {
+        "window": 8
+      }
+    },
+    {
+      "model_name": "Suavizado Exponencial Simple (SES)",
+      "dataset": "trend_24",
+      "dataset_size": 24,
+      "execution_time": 0.014,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:49.632169",
+      "metrics": {
+        "mae": 8.35,
+        "mse": 103.02,
+        "rmse": 10.15,
+        "mape": 7.85
+      },
+      "parameters": {
+        "alpha": 0.2
+      }
+    },
+    {
+      "model_name": "Holt-Winters (Triple Exponencial)",
+      "dataset": "trend_24",
+      "dataset_size": 24,
+      "execution_time": 0.044,
+      "memory_used_mb": 0.22,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:49.676197",
+      "metrics": {
+        "mae": 4.76,
+        "mse": 36.78,
+        "rmse": 6.06,
+        "mape": 4.57
+      },
+      "parameters": {
+        "seasonal": "mul",
+        "seasonal_periods": 12
+      }
+    },
+    {
+      "model_name": "ARIMA (AutoRegressive Integrated Moving Average)",
+      "dataset": "trend_24",
+      "dataset_size": 24,
+      "execution_time": 0.126,
+      "memory_used_mb": 0.08,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:49.802164",
+      "metrics": {
+        "mae": 7.87,
+        "mse": 96.86,
+        "rmse": 9.84,
+        "mape": 7.59
+      },
+      "parameters": {
+        "order": [
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "model_name": "Regresión Lineal",
+      "dataset": "trend_24",
+      "dataset_size": 24,
+      "execution_time": 0.002,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:49.803686",
+      "metrics": {
+        "mae": 7.53,
+        "mse": 75.05,
+        "rmse": 8.66,
+        "mape": 7.23
+      },
+      "parameters": {
+        "intercept": 97.02,
+        "coefficient": 0.85
+      }
+    },
+    {
+      "model_name": "Random Forest",
+      "dataset": "trend_24",
+      "dataset_size": 24,
+      "execution_time": 0.356,
+      "memory_used_mb": 0.34,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:50.161191",
+      "metrics": {
+        "mae": 3.1,
+        "mse": 14.49,
+        "rmse": 3.81,
+        "mape": 3.02
+      },
+      "parameters": {
+        "n_estimators": 50,
+        "max_depth": null
+      }
+    },
+    {
+      "model_name": "Media Móvil Simple (SMA)",
+      "dataset": "seasonal_24",
+      "dataset_size": 24,
+      "execution_time": 0.008,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:50.168710",
+      "metrics": {
+        "mae": 13.11,
+        "mse": 281.71,
+        "rmse": 16.78,
+        "mape": 14.01
+      },
+      "parameters": {
+        "window": 3
+      }
+    },
+    {
+      "model_name": "Suavizado Exponencial Simple (SES)",
+      "dataset": "seasonal_24",
+      "dataset_size": 24,
+      "execution_time": 0.01,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:50.178928",
+      "metrics": {
+        "mae": 11.64,
+        "mse": 243.96,
+        "rmse": 15.62,
+        "mape": 12.07
+      },
+      "parameters": {
+        "alpha": 0.7
+      }
+    },
+    {
+      "model_name": "Holt-Winters (Triple Exponencial)",
+      "dataset": "seasonal_24",
+      "dataset_size": 24,
+      "execution_time": 0.028,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:50.208519",
+      "metrics": {
+        "mae": 6.35,
+        "mse": 67.66,
+        "rmse": 8.23,
+        "mape": 6.67
+      },
+      "parameters": {
+        "seasonal": "add",
+        "seasonal_periods": 12
+      }
+    },
+    {
+      "model_name": "ARIMA (AutoRegressive Integrated Moving Average)",
+      "dataset": "seasonal_24",
+      "dataset_size": 24,
+      "execution_time": 0.226,
+      "memory_used_mb": 0.01,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:50.435589",
+      "metrics": {
+        "mae": 11.11,
+        "mse": 216.09,
+        "rmse": 14.7,
+        "mape": 11.6
+      },
+      "parameters": {
+        "order": [
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "model_name": "Regresión Lineal",
+      "dataset": "seasonal_24",
+      "dataset_size": 24,
+      "execution_time": 0.001,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:50.437611",
+      "metrics": {
+        "mae": 14.58,
+        "mse": 278.85,
+        "rmse": 16.7,
+        "mape": 15.26
+      },
+      "parameters": {
+        "intercept": 108.62,
+        "coefficient": -0.86
+      }
+    },
+    {
+      "model_name": "Random Forest",
+      "dataset": "seasonal_24",
+      "dataset_size": 24,
+      "execution_time": 0.358,
+      "memory_used_mb": 0.09,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:50.796057",
+      "metrics": {
+        "mae": 4.05,
+        "mse": 28.07,
+        "rmse": 5.3,
+        "mape": 4.13
+      },
+      "parameters": {
+        "n_estimators": 50,
+        "max_depth": null
+      }
+    },
+    {
+      "model_name": "Media Móvil Simple (SMA)",
+      "dataset": "stationary_24",
+      "dataset_size": 24,
+      "execution_time": 0.007,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:50.803264",
+      "metrics": {
+        "mae": 0.01,
+        "mse": 0.0,
+        "rmse": 0.01,
+        "mape": 7.88
+      },
+      "parameters": {
+        "window": 11
+      }
+    },
+    {
+      "model_name": "Suavizado Exponencial Simple (SES)",
+      "dataset": "stationary_24",
+      "dataset_size": 24,
+      "execution_time": 0.012,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:50.816289",
+      "metrics": {
+        "mae": 0.01,
+        "mse": 0.0,
+        "rmse": 0.01,
+        "mape": 6.7
+      },
+      "parameters": {
+        "alpha": 0.1
+      }
+    },
+    {
+      "model_name": "Holt-Winters (Triple Exponencial)",
+      "dataset": "stationary_24",
+      "dataset_size": 24,
+      "execution_time": 0.029,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:50.846647",
+      "metrics": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "rmse": 0.01,
+        "mape": 3.5
+      },
+      "parameters": {
+        "seasonal": "add",
+        "seasonal_periods": 12
+      }
+    },
+    {
+      "model_name": "ARIMA (AutoRegressive Integrated Moving Average)",
+      "dataset": "stationary_24",
+      "dataset_size": 24,
+      "execution_time": 0.326,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:51.172583",
+      "metrics": {
+        "mae": 0.01,
+        "mse": 0.0,
+        "rmse": 0.01,
+        "mape": 7.17
+      },
+      "parameters": {
+        "order": [
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "model_name": "Regresión Lineal",
+      "dataset": "stationary_24",
+      "dataset_size": 24,
+      "execution_time": 0.001,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:51.174684",
+      "metrics": {
+        "mae": 0.01,
+        "mse": 0.0,
+        "rmse": 0.01,
+        "mape": 7.0
+      },
+      "parameters": {
+        "intercept": 0.1,
+        "coefficient": 0.0
+      }
+    },
+    {
+      "model_name": "Random Forest",
+      "dataset": "stationary_24",
+      "dataset_size": 24,
+      "execution_time": 0.353,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:51.528711",
+      "metrics": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "rmse": 0.0,
+        "mape": 2.41
+      },
+      "parameters": {
+        "n_estimators": 50,
+        "max_depth": 5
+      }
+    },
+    {
+      "model_name": "Media Móvil Simple (SMA)",
+      "dataset": "complex_24",
+      "dataset_size": 24,
+      "execution_time": 0.006,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:51.535972",
+      "metrics": {
+        "mae": 12.6,
+        "mse": 251.34,
+        "rmse": 15.85,
+        "mape": 11.69
+      },
+      "parameters": {
+        "window": 12
+      }
+    },
+    {
+      "model_name": "Suavizado Exponencial Simple (SES)",
+      "dataset": "complex_24",
+      "dataset_size": 24,
+      "execution_time": 0.011,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:51.546755",
+      "metrics": {
+        "mae": 13.49,
+        "mse": 266.82,
+        "rmse": 16.33,
+        "mape": 13.1
+      },
+      "parameters": {
+        "alpha": 0.6
+      }
+    },
+    {
+      "model_name": "Holt-Winters (Triple Exponencial)",
+      "dataset": "complex_24",
+      "dataset_size": 24,
+      "execution_time": 0.031,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:51.578316",
+      "metrics": {
+        "mae": 7.52,
+        "mse": 79.72,
+        "rmse": 8.93,
+        "mape": 7.02
+      },
+      "parameters": {
+        "seasonal": "add",
+        "seasonal_periods": 12
+      }
+    },
+    {
+      "model_name": "ARIMA (AutoRegressive Integrated Moving Average)",
+      "dataset": "complex_24",
+      "dataset_size": 24,
+      "execution_time": 0.153,
+      "memory_used_mb": 0.01,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:51.731175",
+      "metrics": {
+        "mae": 12.16,
+        "mse": 219.05,
+        "rmse": 14.8,
+        "mape": 11.87
+      },
+      "parameters": {
+        "order": [
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "model_name": "Regresión Lineal",
+      "dataset": "complex_24",
+      "dataset_size": 24,
+      "execution_time": 0.002,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:51.733983",
+      "metrics": {
+        "mae": 13.13,
+        "mse": 241.44,
+        "rmse": 15.54,
+        "mape": 12.83
+      },
+      "parameters": {
+        "intercept": 107.29,
+        "coefficient": -0.21
+      }
+    },
+    {
+      "model_name": "Random Forest",
+      "dataset": "complex_24",
+      "dataset_size": 24,
+      "execution_time": 0.371,
+      "memory_used_mb": 0.02,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:52.104892",
+      "metrics": {
+        "mae": 5.24,
+        "mse": 35.37,
+        "rmse": 5.95,
+        "mape": 5.02
+      },
+      "parameters": {
+        "n_estimators": 50,
+        "max_depth": null
+      }
+    },
+    {
+      "model_name": "Media Móvil Simple (SMA)",
+      "dataset": "trend_60",
+      "dataset_size": 60,
+      "execution_time": 0.01,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:52.115065",
+      "metrics": {
+        "mae": 9.51,
+        "mse": 124.87,
+        "rmse": 11.17,
+        "mape": 8.02
+      },
+      "parameters": {
+        "window": 8
+      }
+    },
+    {
+      "model_name": "Suavizado Exponencial Simple (SES)",
+      "dataset": "trend_60",
+      "dataset_size": 60,
+      "execution_time": 0.012,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:52.127549",
+      "metrics": {
+        "mae": 9.52,
+        "mse": 128.16,
+        "rmse": 11.32,
+        "mape": 8.11
+      },
+      "parameters": {
+        "alpha": 0.1
+      }
+    },
+    {
+      "model_name": "Holt-Winters (Triple Exponencial)",
+      "dataset": "trend_60",
+      "dataset_size": 60,
+      "execution_time": 0.033,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:52.161060",
+      "metrics": {
+        "mae": 7.01,
+        "mse": 80.55,
+        "rmse": 8.97,
+        "mape": 6.1
+      },
+      "parameters": {
+        "seasonal": "mul",
+        "seasonal_periods": 12
+      }
+    },
+    {
+      "model_name": "ARIMA (AutoRegressive Integrated Moving Average)",
+      "dataset": "trend_60",
+      "dataset_size": 60,
+      "execution_time": 0.141,
+      "memory_used_mb": 0.01,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:52.301807",
+      "metrics": {
+        "mae": 9.52,
+        "mse": 126.02,
+        "rmse": 11.23,
+        "mape": 8.29
+      },
+      "parameters": {
+        "order": [
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "model_name": "Regresión Lineal",
+      "dataset": "trend_60",
+      "dataset_size": 60,
+      "execution_time": 0.001,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:52.303364",
+      "metrics": {
+        "mae": 8.01,
+        "mse": 100.54,
+        "rmse": 10.03,
+        "mape": 7.05
+      },
+      "parameters": {
+        "intercept": 101.28,
+        "coefficient": 0.5
+      }
+    },
+    {
+      "model_name": "Random Forest",
+      "dataset": "trend_60",
+      "dataset_size": 60,
+      "execution_time": 0.39,
+      "memory_used_mb": 0.27,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:52.693814",
+      "metrics": {
+        "mae": 3.37,
+        "mse": 16.65,
+        "rmse": 4.08,
+        "mape": 2.98
+      },
+      "parameters": {
+        "n_estimators": 100,
+        "max_depth": null
+      }
+    },
+    {
+      "model_name": "Media Móvil Simple (SMA)",
+      "dataset": "seasonal_60",
+      "dataset_size": 60,
+      "execution_time": 0.009,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:52.703280",
+      "metrics": {
+        "mae": 15.43,
+        "mse": 366.6,
+        "rmse": 19.15,
+        "mape": 17.49
+      },
+      "parameters": {
+        "window": 12
+      }
+    },
+    {
+      "model_name": "Suavizado Exponencial Simple (SES)",
+      "dataset": "seasonal_60",
+      "dataset_size": 60,
+      "execution_time": 0.012,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:52.717191",
+      "metrics": {
+        "mae": 14.47,
+        "mse": 311.65,
+        "rmse": 17.65,
+        "mape": 15.38
+      },
+      "parameters": {
+        "alpha": 0.8
+      }
+    },
+    {
+      "model_name": "Holt-Winters (Triple Exponencial)",
+      "dataset": "seasonal_60",
+      "dataset_size": 60,
+      "execution_time": 0.029,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:52.746170",
+      "metrics": {
+        "mae": 8.36,
+        "mse": 117.09,
+        "rmse": 10.82,
+        "mape": 8.81
+      },
+      "parameters": {
+        "seasonal": "add",
+        "seasonal_periods": 12
+      }
+    },
+    {
+      "model_name": "ARIMA (AutoRegressive Integrated Moving Average)",
+      "dataset": "seasonal_60",
+      "dataset_size": 60,
+      "execution_time": 0.223,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:52.968941",
+      "metrics": {
+        "mae": 13.65,
+        "mse": 261.64,
+        "rmse": 16.18,
+        "mape": 14.58
+      },
+      "parameters": {
+        "order": [
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "model_name": "Regresión Lineal",
+      "dataset": "seasonal_60",
+      "dataset_size": 60,
+      "execution_time": 0.001,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:52.970072",
+      "metrics": {
+        "mae": 15.7,
+        "mse": 355.92,
+        "rmse": 18.87,
+        "mape": 16.84
+      },
+      "parameters": {
+        "intercept": 107.35,
+        "coefficient": -0.24
+      }
+    },
+    {
+      "model_name": "Random Forest",
+      "dataset": "seasonal_60",
+      "dataset_size": 60,
+      "execution_time": 0.36,
+      "memory_used_mb": 0.05,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:53.331142",
+      "metrics": {
+        "mae": 4.41,
+        "mse": 31.28,
+        "rmse": 5.59,
+        "mape": 4.59
+      },
+      "parameters": {
+        "n_estimators": 100,
+        "max_depth": null
+      }
+    },
+    {
+      "model_name": "Media Móvil Simple (SMA)",
+      "dataset": "stationary_60",
+      "dataset_size": 60,
+      "execution_time": 0.011,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:53.341799",
+      "metrics": {
+        "mae": 0.01,
+        "mse": 0.0,
+        "rmse": 0.01,
+        "mape": 8.08
+      },
+      "parameters": {
+        "window": 12
+      }
+    },
+    {
+      "model_name": "Suavizado Exponencial Simple (SES)",
+      "dataset": "stationary_60",
+      "dataset_size": 60,
+      "execution_time": 0.012,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:53.353814",
+      "metrics": {
+        "mae": 0.01,
+        "mse": 0.0,
+        "rmse": 0.01,
+        "mape": 7.68
+      },
+      "parameters": {
+        "alpha": 0.1
+      }
+    },
+    {
+      "model_name": "Holt-Winters (Triple Exponencial)",
+      "dataset": "stationary_60",
+      "dataset_size": 60,
+      "execution_time": 0.029,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:53.382921",
+      "metrics": {
+        "mae": 0.01,
+        "mse": 0.0,
+        "rmse": 0.01,
+        "mape": 5.66
+      },
+      "parameters": {
+        "seasonal": "add",
+        "seasonal_periods": 12
+      }
+    },
+    {
+      "model_name": "ARIMA (AutoRegressive Integrated Moving Average)",
+      "dataset": "stationary_60",
+      "dataset_size": 60,
+      "execution_time": 0.349,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:53.732048",
+      "metrics": {
+        "mae": 0.01,
+        "mse": 0.0,
+        "rmse": 0.01,
+        "mape": 7.76
+      },
+      "parameters": {
+        "order": [
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "model_name": "Regresión Lineal",
+      "dataset": "stationary_60",
+      "dataset_size": 60,
+      "execution_time": 0.001,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:53.734544",
+      "metrics": {
+        "mae": 0.01,
+        "mse": 0.0,
+        "rmse": 0.01,
+        "mape": 7.97
+      },
+      "parameters": {
+        "intercept": 0.11,
+        "coefficient": 0.0
+      }
+    },
+    {
+      "model_name": "Random Forest",
+      "dataset": "stationary_60",
+      "dataset_size": 60,
+      "execution_time": 0.36,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:54.094360",
+      "metrics": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "rmse": 0.0,
+        "mape": 3.09
+      },
+      "parameters": {
+        "n_estimators": 50,
+        "max_depth": null
+      }
+    },
+    {
+      "model_name": "Media Móvil Simple (SMA)",
+      "dataset": "complex_60",
+      "dataset_size": 60,
+      "execution_time": 0.013,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:54.108043",
+      "metrics": {
+        "mae": 14.24,
+        "mse": 279.64,
+        "rmse": 16.72,
+        "mape": 12.1
+      },
+      "parameters": {
+        "window": 12
+      }
+    },
+    {
+      "model_name": "Suavizado Exponencial Simple (SES)",
+      "dataset": "complex_60",
+      "dataset_size": 60,
+      "execution_time": 0.016,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:54.124174",
+      "metrics": {
+        "mae": 12.04,
+        "mse": 231.88,
+        "rmse": 15.23,
+        "mape": 10.25
+      },
+      "parameters": {
+        "alpha": 0.9
+      }
+    },
+    {
+      "model_name": "Holt-Winters (Triple Exponencial)",
+      "dataset": "complex_60",
+      "dataset_size": 60,
+      "execution_time": 0.035,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:54.160315",
+      "metrics": {
+        "mae": 7.32,
+        "mse": 103.53,
+        "rmse": 10.17,
+        "mape": 6.22
+      },
+      "parameters": {
+        "seasonal": "mul",
+        "seasonal_periods": 12
+      }
+    },
+    {
+      "model_name": "ARIMA (AutoRegressive Integrated Moving Average)",
+      "dataset": "complex_60",
+      "dataset_size": 60,
+      "execution_time": 0.224,
+      "memory_used_mb": 0.01,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:54.384270",
+      "metrics": {
+        "mae": 11.21,
+        "mse": 202.73,
+        "rmse": 14.24,
+        "mape": 9.67
+      },
+      "parameters": {
+        "order": [
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "model_name": "Regresión Lineal",
+      "dataset": "complex_60",
+      "dataset_size": 60,
+      "execution_time": 0.001,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:54.386291",
+      "metrics": {
+        "mae": 14.82,
+        "mse": 324.03,
+        "rmse": 18.0,
+        "mape": 12.96
+      },
+      "parameters": {
+        "intercept": 104.01,
+        "coefficient": 0.39
+      }
+    },
+    {
+      "model_name": "Random Forest",
+      "dataset": "complex_60",
+      "dataset_size": 60,
+      "execution_time": 0.391,
+      "memory_used_mb": 0.12,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:54.777312",
+      "metrics": {
+        "mae": 3.23,
+        "mse": 20.02,
+        "rmse": 4.47,
+        "mape": 2.78
+      },
+      "parameters": {
+        "n_estimators": 100,
+        "max_depth": null
+      }
+    },
+    {
+      "model_name": "Media Móvil Simple (SMA)",
+      "dataset": "trend_120",
+      "dataset_size": 120,
+      "execution_time": 0.019,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:54.796319",
+      "metrics": {
+        "mae": 9.93,
+        "mse": 167.34,
+        "rmse": 12.94,
+        "mape": 7.82
+      },
+      "parameters": {
+        "window": 9
+      }
+    },
+    {
+      "model_name": "Suavizado Exponencial Simple (SES)",
+      "dataset": "trend_120",
+      "dataset_size": 120,
+      "execution_time": 0.015,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:54.811169",
+      "metrics": {
+        "mae": 9.98,
+        "mse": 165.29,
+        "rmse": 12.86,
+        "mape": 7.92
+      },
+      "parameters": {
+        "alpha": 0.2
+      }
+    },
+    {
+      "model_name": "Holt-Winters (Triple Exponencial)",
+      "dataset": "trend_120",
+      "dataset_size": 120,
+      "execution_time": 0.038,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:54.849541",
+      "metrics": {
+        "mae": 9.22,
+        "mse": 139.41,
+        "rmse": 11.81,
+        "mape": 7.27
+      },
+      "parameters": {
+        "seasonal": "mul",
+        "seasonal_periods": 12
+      }
+    },
+    {
+      "model_name": "ARIMA (AutoRegressive Integrated Moving Average)",
+      "dataset": "trend_120",
+      "dataset_size": 120,
+      "execution_time": 0.211,
+      "memory_used_mb": 0.01,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:55.060935",
+      "metrics": {
+        "mae": 10.22,
+        "mse": 171.14,
+        "rmse": 13.08,
+        "mape": 8.15
+      },
+      "parameters": {
+        "order": [
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "model_name": "Regresión Lineal",
+      "dataset": "trend_120",
+      "dataset_size": 120,
+      "execution_time": 0.0,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:55.062404",
+      "metrics": {
+        "mae": 9.23,
+        "mse": 142.08,
+        "rmse": 11.92,
+        "mape": 7.5
+      },
+      "parameters": {
+        "intercept": 97.38,
+        "coefficient": 0.53
+      }
+    },
+    {
+      "model_name": "Random Forest",
+      "dataset": "trend_120",
+      "dataset_size": 120,
+      "execution_time": 0.412,
+      "memory_used_mb": 0.61,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:55.475269",
+      "metrics": {
+        "mae": 4.11,
+        "mse": 26.99,
+        "rmse": 5.2,
+        "mape": 3.31
+      },
+      "parameters": {
+        "n_estimators": 100,
+        "max_depth": null
+      }
+    },
+    {
+      "model_name": "Media Móvil Simple (SMA)",
+      "dataset": "seasonal_120",
+      "dataset_size": 120,
+      "execution_time": 0.015,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:55.489841",
+      "metrics": {
+        "mae": 13.74,
+        "mse": 284.03,
+        "rmse": 16.85,
+        "mape": 14.34
+      },
+      "parameters": {
+        "window": 12
+      }
+    },
+    {
+      "model_name": "Suavizado Exponencial Simple (SES)",
+      "dataset": "seasonal_120",
+      "dataset_size": 120,
+      "execution_time": 0.012,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:55.503821",
+      "metrics": {
+        "mae": 12.53,
+        "mse": 253.99,
+        "rmse": 15.94,
+        "mape": 12.93
+      },
+      "parameters": {
+        "alpha": 0.7
+      }
+    },
+    {
+      "model_name": "Holt-Winters (Triple Exponencial)",
+      "dataset": "seasonal_120",
+      "dataset_size": 120,
+      "execution_time": 0.031,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:55.535565",
+      "metrics": {
+        "mae": 7.37,
+        "mse": 88.78,
+        "rmse": 9.42,
+        "mape": 7.53
+      },
+      "parameters": {
+        "seasonal": "add",
+        "seasonal_periods": 12
+      }
+    },
+    {
+      "model_name": "ARIMA (AutoRegressive Integrated Moving Average)",
+      "dataset": "seasonal_120",
+      "dataset_size": 120,
+      "execution_time": 0.181,
+      "memory_used_mb": 0.01,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:55.716698",
+      "metrics": {
+        "mae": 11.47,
+        "mse": 208.76,
+        "rmse": 14.45,
+        "mape": 11.88
+      },
+      "parameters": {
+        "order": [
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "model_name": "Regresión Lineal",
+      "dataset": "seasonal_120",
+      "dataset_size": 120,
+      "execution_time": 0.002,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:55.718201",
+      "metrics": {
+        "mae": 13.92,
+        "mse": 289.27,
+        "rmse": 17.01,
+        "mape": 14.57
+      },
+      "parameters": {
+        "intercept": 101.88,
+        "coefficient": -0.02
+      }
+    },
+    {
+      "model_name": "Random Forest",
+      "dataset": "seasonal_120",
+      "dataset_size": 120,
+      "execution_time": 0.382,
+      "memory_used_mb": 0.12,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:56.099880",
+      "metrics": {
+        "mae": 3.55,
+        "mse": 20.03,
+        "rmse": 4.48,
+        "mape": 3.63
+      },
+      "parameters": {
+        "n_estimators": 50,
+        "max_depth": null
+      }
+    },
+    {
+      "model_name": "Media Móvil Simple (SMA)",
+      "dataset": "stationary_120",
+      "dataset_size": 120,
+      "execution_time": 0.014,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:56.113627",
+      "metrics": {
+        "mae": 0.01,
+        "mse": 0.0,
+        "rmse": 0.01,
+        "mape": 7.86
+      },
+      "parameters": {
+        "window": 12
+      }
+    },
+    {
+      "model_name": "Suavizado Exponencial Simple (SES)",
+      "dataset": "stationary_120",
+      "dataset_size": 120,
+      "execution_time": 0.01,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:56.124526",
+      "metrics": {
+        "mae": 0.01,
+        "mse": 0.0,
+        "rmse": 0.01,
+        "mape": 7.55
+      },
+      "parameters": {
+        "alpha": 0.1
+      }
+    },
+    {
+      "model_name": "Holt-Winters (Triple Exponencial)",
+      "dataset": "stationary_120",
+      "dataset_size": 120,
+      "execution_time": 0.028,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:56.153773",
+      "metrics": {
+        "mae": 0.01,
+        "mse": 0.0,
+        "rmse": 0.01,
+        "mape": 6.91
+      },
+      "parameters": {
+        "seasonal": "add",
+        "seasonal_periods": 12
+      }
+    },
+    {
+      "model_name": "ARIMA (AutoRegressive Integrated Moving Average)",
+      "dataset": "stationary_120",
+      "dataset_size": 120,
+      "execution_time": 0.355,
+      "memory_used_mb": 0.01,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:56.509642",
+      "metrics": {
+        "mae": 0.01,
+        "mse": 0.0,
+        "rmse": 0.01,
+        "mape": 7.61
+      },
+      "parameters": {
+        "order": [
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "model_name": "Regresión Lineal",
+      "dataset": "stationary_120",
+      "dataset_size": 120,
+      "execution_time": 0.002,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:56.512651",
+      "metrics": {
+        "mae": 0.01,
+        "mse": 0.0,
+        "rmse": 0.01,
+        "mape": 7.51
+      },
+      "parameters": {
+        "intercept": 0.11,
+        "coefficient": -0.0
+      }
+    },
+    {
+      "model_name": "Random Forest",
+      "dataset": "stationary_120",
+      "dataset_size": 120,
+      "execution_time": 0.405,
+      "memory_used_mb": 0.02,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:56.917767",
+      "metrics": {
+        "mae": 0.0,
+        "mse": 0.0,
+        "rmse": 0.0,
+        "mape": 2.94
+      },
+      "parameters": {
+        "n_estimators": 50,
+        "max_depth": null
+      }
+    },
+    {
+      "model_name": "Media Móvil Simple (SMA)",
+      "dataset": "complex_120",
+      "dataset_size": 120,
+      "execution_time": 0.015,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:56.932492",
+      "metrics": {
+        "mae": 13.99,
+        "mse": 340.17,
+        "rmse": 18.44,
+        "mape": 10.89
+      },
+      "parameters": {
+        "window": 12
+      }
+    },
+    {
+      "model_name": "Suavizado Exponencial Simple (SES)",
+      "dataset": "complex_120",
+      "dataset_size": 120,
+      "execution_time": 0.021,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:56.954352",
+      "metrics": {
+        "mae": 13.48,
+        "mse": 354.7,
+        "rmse": 18.83,
+        "mape": 10.92
+      },
+      "parameters": {
+        "alpha": 0.7
+      }
+    },
+    {
+      "model_name": "Holt-Winters (Triple Exponencial)",
+      "dataset": "complex_120",
+      "dataset_size": 120,
+      "execution_time": 0.035,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:56.990968",
+      "metrics": {
+        "mae": 10.14,
+        "mse": 213.31,
+        "rmse": 14.61,
+        "mape": 8.01
+      },
+      "parameters": {
+        "seasonal": "add",
+        "seasonal_periods": 12
+      }
+    },
+    {
+      "model_name": "ARIMA (AutoRegressive Integrated Moving Average)",
+      "dataset": "complex_120",
+      "dataset_size": 120,
+      "execution_time": 0.253,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:57.244227",
+      "metrics": {
+        "mae": 13.31,
+        "mse": 324.24,
+        "rmse": 18.01,
+        "mape": 10.91
+      },
+      "parameters": {
+        "order": [
+          1,
+          0,
+          1
+        ]
+      }
+    },
+    {
+      "model_name": "Regresión Lineal",
+      "dataset": "complex_120",
+      "dataset_size": 120,
+      "execution_time": 0.002,
+      "memory_used_mb": 0.0,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:57.247261",
+      "metrics": {
+        "mae": 13.37,
+        "mse": 296.99,
+        "rmse": 17.23,
+        "mape": 10.9
+      },
+      "parameters": {
+        "intercept": 103.37,
+        "coefficient": 0.46
+      }
+    },
+    {
+      "model_name": "Random Forest",
+      "dataset": "complex_120",
+      "dataset_size": 120,
+      "execution_time": 0.455,
+      "memory_used_mb": 0.07,
+      "success": true,
+      "within_time_threshold": true,
+      "within_memory_threshold": true,
+      "timestamp": "2025-08-22T15:50:57.702544",
+      "metrics": {
+        "mae": 4.29,
+        "mse": 36.4,
+        "rmse": 6.03,
+        "mape": 3.52
+      },
+      "parameters": {
+        "n_estimators": 50,
+        "max_depth": null
+      }
+    },
+    {
+      "test_type": "parallel_processing",
+      "sequential_time": 0.705,
+      "parallel_time": 0.642,
+      "efficiency_improvement": 8.97,
+      "models_completed_sequential": 6,
+      "models_completed_parallel": 6,
+      "timestamp": "2025-08-22T15:50:59.049802"
+    },
+    {
+      "model_name": "Media Móvil Simple (SMA)",
+      "memory_before_mb": 143.33,
+      "memory_after_mb": 143.33,
+      "memory_peak_mb": 143.33,
+      "memory_increase_mb": 0.0,
+      "within_memory_threshold": true,
+      "success": true,
+      "timestamp": "2025-08-22T15:50:59.072504"
+    },
+    {
+      "model_name": "Suavizado Exponencial Simple (SES)",
+      "memory_before_mb": 143.33,
+      "memory_after_mb": 143.33,
+      "memory_peak_mb": 143.33,
+      "memory_increase_mb": 0.0,
+      "within_memory_threshold": true,
+      "success": true,
+      "timestamp": "2025-08-22T15:50:59.087989"
+    },
+    {
+      "model_name": "Holt-Winters (Triple Exponencial)",
+      "memory_before_mb": 143.33,
+      "memory_after_mb": 143.33,
+      "memory_peak_mb": 143.33,
+      "memory_increase_mb": 0.0,
+      "within_memory_threshold": true,
+      "success": true,
+      "timestamp": "2025-08-22T15:50:59.134400"
+    },
+    {
+      "model_name": "ARIMA (AutoRegressive Integrated Moving Average)",
+      "memory_before_mb": 143.33,
+      "memory_after_mb": 143.34,
+      "memory_peak_mb": 143.34,
+      "memory_increase_mb": 0.01,
+      "within_memory_threshold": true,
+      "success": true,
+      "timestamp": "2025-08-22T15:50:59.458161"
+    },
+    {
+      "model_name": "Regresión Lineal",
+      "memory_before_mb": 143.34,
+      "memory_after_mb": 143.34,
+      "memory_peak_mb": 143.34,
+      "memory_increase_mb": 0.0,
+      "within_memory_threshold": true,
+      "success": true,
+      "timestamp": "2025-08-22T15:50:59.461191"
+    },
+    {
+      "model_name": "Random Forest",
+      "memory_before_mb": 143.34,
+      "memory_after_mb": 143.61,
+      "memory_peak_mb": 143.61,
+      "memory_increase_mb": 0.27,
+      "within_memory_threshold": true,
+      "success": true,
+      "timestamp": "2025-08-22T15:50:59.868422"
+    }
+  ],
+  "thresholds": {
+    "max_execution_time_seconds": 30.0,
+    "max_memory_usage_mb": 500
+  },
+  "timestamp": "2025-08-22T15:50:59.869429"
+}

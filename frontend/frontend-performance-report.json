@@ -1,0 +1,101 @@
+{
+  "timestamp": "2025-08-22T22:02:41.814Z",
+  "testType": "frontend_performance",
+  "staticAnalysis": {
+    "bundleSize": {
+      "estimatedTotalKB": 606.4,
+      "breakdown": {
+        "@emotion/react": 45.2,
+        "@emotion/styled": 23.1,
+        "@mui/icons-material": 89.3,
+        "@mui/material": 156.8,
+        "@mui/x-data-grid": 15,
+        "react": 42.2,
+        "react-dom": 130.5,
+        "react-scripts": 15,
+        "recharts": 89.3
+      },
+      "dependencyCount": 9,
+      "devDependencyCount": 3,
+      "withinThreshold": false
+    },
+    "dependencies": {
+      "total": 9,
+      "byCategory": {
+        "ui": 4,
+        "charts": 1,
+        "core": 3,
+        "testing": 0
+      },
+      "heavyDependencies": [
+        "@mui/material",
+        "recharts"
+      ],
+      "recommendations": [
+        "Considerar tree-shaking para dependencias pesadas"
+      ]
+    },
+    "codeComplexity": {
+      "totalComponents": 0,
+      "avgFileSize": 0,
+      "largeFiles": [],
+      "recommendations": []
+    },
+    "performance": {
+      "renderOptimizations": {
+        "optimizations": {
+          "memoization": false,
+          "lazyLoading": false,
+          "virtualization": false,
+          "codesplitting": false
+        },
+        "recommendations": [
+          "Implementar React.memo para componentes que reciben props estables",
+          "Considerar lazy loading para componentes pesados",
+          "Evaluar virtualización para listas grandes de datos"
+        ]
+      },
+      "memoryLeaks": {
+        "potentialIssues": [],
+        "recommendations": [
+          "Verificar que todos los event listeners se limpien en useEffect cleanup",
+          "Asegurar que las subscripciones se cancelen apropiadamente",
+          "Revisar el uso de closures que puedan retener referencias"
+        ]
+      },
+      "bundleOptimizations": {
+        "optimizations": {
+          "treeShaking": true,
+          "minification": true,
+          "compression": false,
+          "codesplitting": false
+        },
+        "recommendations": [
+          "Habilitar compresión gzip en el servidor",
+          "Implementar code splitting con React.lazy()"
+        ]
+      }
+    }
+  },
+  "summary": {
+    "testsExecuted": true,
+    "reportGenerated": true,
+    "recommendations": [
+      {
+        "category": "Bundle Size",
+        "priority": "High",
+        "description": "El bundle es grande, implementar code splitting y tree shaking"
+      },
+      {
+        "category": "Dependencies",
+        "priority": "Medium",
+        "description": "Optimizar dependencias pesadas con tree shaking"
+      },
+      {
+        "category": "Performance",
+        "priority": "Low",
+        "description": "Implementar React.memo y useMemo para optimizar re-renders"
+      }
+    ]
+  }
+}

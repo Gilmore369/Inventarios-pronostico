@@ -68,8 +68,15 @@ class ForecastModels:
         }
     
     def calculate_metrics(self, actual, predicted):
-        # Filtrar valores NaN
-        valid_mask = ~np.isnan(actual) & ~np.isnan(predicted)
+        # Convertir a numpy arrays si no lo son
+        actual = np.array(actual, dtype=float)
+        predicted = np.array(predicted, dtype=float)
+        
+        # Filtrar valores NaN e infinitos
+        valid_mask = (
+            ~np.isnan(actual) & ~np.isnan(predicted) & 
+            np.isfinite(actual) & np.isfinite(predicted)
+        )
         actual_valid = actual[valid_mask]
         predicted_valid = predicted[valid_mask]
         
@@ -86,15 +93,24 @@ class ForecastModels:
         rmse = np.sqrt(mse)
         
         # MAPE con protección contra divisiones por cero
-        with np.errstate(divide='ignore', invalid='ignore'):
-            mape = np.mean(np.abs((actual_valid - predicted_valid) / actual_valid)) * 100
-            mape = np.nan if np.isinf(mape) else mape
+        # Solo calcular para valores actuales != 0
+        nonzero_mask = actual_valid != 0
+        if np.any(nonzero_mask):
+            actual_nonzero = actual_valid[nonzero_mask]
+            predicted_nonzero = predicted_valid[nonzero_mask]
+            
+            with np.errstate(divide='ignore', invalid='ignore'):
+                mape_values = np.abs((actual_nonzero - predicted_nonzero) / actual_nonzero) * 100
+                mape = np.mean(mape_values)
+                mape = mape if np.isfinite(mape) else float('nan')
+        else:
+            mape = float('nan')
         
         return {
-            'mae': round(mae, 2),
-            'mse': round(mse, 2),
-            'rmse': round(rmse, 2),
-            'mape': round(mape, 2) if not np.isnan(mape) else float('nan')
+            'mae': round(float(mae), 2),
+            'mse': round(float(mse), 2),
+            'rmse': round(float(rmse), 2),
+            'mape': round(float(mape), 2) if not np.isnan(mape) else float('nan')
         }
     
     def sma_model(self, data, window=3):
@@ -119,13 +135,13 @@ class ForecastModels:
                     else:
                         preds.append(np.mean(data[i-w:i]))
                 
-                metrics = self.calculate_metrics(data, np.array(preds))
+                metrics = self.calculate_metrics(data, preds)
                 if not np.isnan(metrics['mape']) and metrics['mape'] < best_mape:
                     best_mape = metrics['mape']
                     best_window = w
                     best_predictions = preds
             
-            metrics = self.calculate_metrics(data, np.array(best_predictions))
+            metrics = self.calculate_metrics(data, best_predictions)
             
             return {
                 'name': 'Media Móvil Simple (SMA)',

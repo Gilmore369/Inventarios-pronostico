@@ -3,7 +3,7 @@ import { ThemeProvider, createTheme } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import Container from '@mui/material/Container';
 import Header from './components/Header';
-import DataInputSimple from './components/DataInputSimple';
+import ModernDataInput from './components/ModernDataInput/ModernDataInput';
 import ResultsTableSimple from './components/ResultsTableSimple';
 import ForecastSimple from './components/ForecastSimple';
 import './App.css';
@@ -94,7 +94,7 @@ function App() {
       <CssBaseline />
       <Header darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Container maxWidth="lg" sx={{ mt: 4, mb: 4 }}>
-        {currentView === 'upload' && <DataInputSimple onDataUpload={handleDataUpload} />}
+        {currentView === 'upload' && <ModernDataInput onDataUpload={handleDataUpload} />}
         {currentView === 'processing' && (
           <div className="loading">
             <h2>Procesando modelos...</h2>

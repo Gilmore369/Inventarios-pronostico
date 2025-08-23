@@ -1,15 +1,11 @@
 from flask import Flask, request, jsonify
 from flask_cors import CORS
-import pandas as pd
-import numpy as np
 import json
+import csv
+import io
 from datetime import datetime
-import sys
-import os
-
-# Agregar el directorio backend al path
-backend_path = os.path.join(os.path.dirname(__file__), '..', 'backend')
-sys.path.insert(0, backend_path)
+import random
+import math
 
 app = Flask(__name__)
 CORS(app)
@@ -26,16 +22,19 @@ def upload_data():
     try:
         if 'file' in request.files:
             file = request.files['file']
-            df = pd.read_csv(file)
+            # Leer CSV sin pandas
+            content = file.read().decode('utf-8')
+            csv_reader = csv.DictReader(io.StringIO(content))
+            data = list(csv_reader)
         else:
             data = request.json
-            df = pd.DataFrame(data)
         
         # Validaciones básicas
-        if len(df) < 12 or len(df) > 120:
+        if len(data) < 12 or len(data) > 120:
             return jsonify({'error': 'Se requieren entre 12 y 120 meses de datos'}), 400
         
-        if 'demand' not in df.columns:
+        # Verificar que existe la columna demand
+        if not data or 'demand' not in data[0]:
             return jsonify({'error': 'La columna "demand" es requerida'}), 400
         
         # Generar session_id
@@ -43,7 +42,7 @@ def upload_data():
         
         # Guardar datos en cache
         results_cache[session_id] = {
-            'data': df.to_dict('records'),
+            'data': data,
             'status': 'uploaded',
             'timestamp': datetime.now().isoformat()
         }
@@ -51,7 +50,7 @@ def upload_data():
         return jsonify({
             'message': 'Datos cargados exitosamente',
             'session_id': session_id,
-            'rows': len(df)
+            'rows': len(data)
         })
         
     except Exception as e:
@@ -111,7 +110,9 @@ def generate_forecast():
         base_value = 100
         forecast = []
         for i in range(periods):
-            value = base_value + (i * 2) + np.random.normal(0, 5)
+            # Usar random en lugar de numpy
+            noise = random.gauss(0, 5)
+            value = base_value + (i * 2) + noise
             forecast.append({
                 'period': i + 1,
                 'forecast': round(value, 2),

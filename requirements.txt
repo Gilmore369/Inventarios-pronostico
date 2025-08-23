@@ -1,7 +1,2 @@
 flask
 flask-cors
-pandas
-numpy
-statsmodels
-scikit-learn
-joblib

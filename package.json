@@ -1,0 +1,13 @@
+{
+  "name": "inventarios-pronostico",
+  "version": "1.0.0",
+  "description": "Sistema de Pronósticos de Inventarios con IA",
+  "scripts": {
+    "build": "cd frontend && npm install && npm run build",
+    "start": "cd frontend && npm start",
+    "install-deps": "cd frontend && npm install && cd ../backend && pip install -r requirements.txt"
+  },
+  "keywords": ["inventory", "forecasting", "ai", "machine-learning", "react", "flask"],
+  "author": "Tu Nombre",
+  "license": "MIT"
+}

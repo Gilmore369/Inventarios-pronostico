@@ -49,3 +49,4 @@ coverage/
 validation_report.json
 complete_validation_report.json
 *.test.json
+.vercel

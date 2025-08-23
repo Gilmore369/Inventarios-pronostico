@@ -9,6 +9,7 @@ import {
   Alert,
   CircularProgress
 } from '@mui/material';
+import { API_ENDPOINTS } from '../config/api';
 
 const ForecastSimple = ({ sessionId, results }) => {
   const [selectedModel, setSelectedModel] = useState(results[0]?.name || '');
@@ -22,7 +23,7 @@ const ForecastSimple = ({ sessionId, results }) => {
     setError('');
     
     try {
-      const response = await fetch('http://localhost:5000/api/forecast', {
+      const response = await fetch(API_ENDPOINTS.forecast, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',

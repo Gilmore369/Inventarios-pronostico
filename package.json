@@ -3,11 +3,16 @@
   "version": "1.0.0",
   "description": "Sistema de Pronósticos de Inventarios con IA",
   "scripts": {
-    "build": "cd frontend && npm install && npm run build",
+    "build": "cd frontend && npm ci && npm run build",
     "start": "cd frontend && npm start",
-    "install-deps": "cd frontend && npm install && cd ../backend && pip install -r requirements.txt"
+    "install": "cd frontend && npm install",
+    "vercel-build": "cd frontend && npm install && npm run build"
   },
   "keywords": ["inventory", "forecasting", "ai", "machine-learning", "react", "flask"],
   "author": "Tu Nombre",
-  "license": "MIT"
+  "license": "MIT",
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  }
 }

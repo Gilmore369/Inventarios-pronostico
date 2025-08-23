@@ -11,7 +11,7 @@ export const useApiUpload = () => {
   const [sessionId, setSessionId] = useState(null);
 
   // API endpoint configuration
-  const API_BASE_URL = 'http://localhost:5000';
+  const API_BASE_URL = process.env.NODE_ENV === 'production' ? '' : 'http://localhost:5000';
   const UPLOAD_ENDPOINT = '/api/upload';
 
   /**

@@ -6,6 +6,7 @@ import Header from './components/Header';
 import ModernDataInput from './components/ModernDataInput/ModernDataInput';
 import ResultsTableSimple from './components/ResultsTableSimple';
 import ForecastSimple from './components/ForecastSimple';
+import { API_ENDPOINTS } from './config/api';
 import './App.css';
 
 const lightTheme = createTheme({
@@ -42,7 +43,7 @@ function App() {
   const processModels = async (sessionId) => {
     setLoading(true);
     try {
-      const response = await fetch('http://localhost:5000/api/process', {
+      const response = await fetch(API_ENDPOINTS.process, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -64,7 +65,7 @@ function App() {
 
   const checkResults = async (sessionId) => {
     try {
-      const response = await fetch(`http://localhost:5000/api/results?session_id=${sessionId}`);
+      const response = await fetch(`${API_ENDPOINTS.results}?session_id=${sessionId}`);
       const data = await response.json();
       
       if (data.status === 'completed') {
